@@ -20,4 +20,12 @@ rem Копируем из Общей_Папки нужны каталоги во
 xcopy "%folderOrdersClients%" "%tempFolderOrdersClients%" /I /S /Y
 xcopy "%folderDogovor%" "%tempFolderDogovor%" /I /S /Y
 rem pause
+rem 
+rem Очищаем каталог Общая_папка
+for /D %%I in (%folderClean%\*.*) do rd "%%I" /S /Q
+del /F /S /Q %folderClean%
+rem pause
+rem
+mkdir "%folderOrdersClients%"
+mkdir "%folderDogovor%"
 rem
