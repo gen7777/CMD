@@ -11,3 +11,13 @@ set tempFolderDogovor=%workFolder%\dogovor
 rem
 rem ****************************************************
 rem
+rem Создаем рабочую папку
+mkdir "%workFolder%"
+cd /D "%workFolder%"
+rem pause
+rem
+rem Копируем из Общей_Папки нужны каталоги во временную папку
+xcopy "%folderOrdersClients%" "%tempFolderOrdersClients%" /I /S /Y
+xcopy "%folderDogovor%" "%tempFolderDogovor%" /I /S /Y
+rem pause
+rem
