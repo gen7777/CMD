@@ -29,3 +29,12 @@ rem
 mkdir "%folderOrdersClients%"
 mkdir "%folderDogovor%"
 rem
+rem Копируем каталоги и файлы из рабочей папки в каталог Общая_папка
+xcopy "%tempFolderOrdersClients%" "%folderOrdersClients%" /S /Y
+xcopy "%tempFolderDogovor%" "%folderDogovor%" /S /Y
+rem pause
+rem
+rem Удаляем рабочую папку
+cd /D C:\
+rd %workFolder% /S /Q
+exit
